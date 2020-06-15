@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/0f0e16d051.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Drag and Drop</title>
+  </head>
+  <body>
+    <div class="title">What do you wanna get??</div>
+    <div class="items">
+      <i
+        class="fas fa-apple-alt"
+        id="draggable"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain',null)"
+      ></i>
+      <i
+        class="fas fa-won-sign"
+        id="draggable"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain',null)"
+      ></i>
+      <i
+        class="fas fa-home"
+        id="draggable"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain',null)"
+      ></i>
+      <i
+        class="fas fa-ice-cream"
+        id="draggable"
+        draggable="true"
+        ondragstart="event.dataTransfer.setData('text/plain',null)"
+      ></i>
+    </div>
+    <div class="cart dropzone">Put in this Box</div>
+  </body>
+</html>
