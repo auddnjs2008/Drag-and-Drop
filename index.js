@@ -1,34 +1,18 @@
-let dragged;
-const item = document.querySelectorAll("#draggable");
-
-function init() {
-  item.forEach(function (i) {
-    i.addEventListener("drag", function (event) {});
-    i.addEventListener("dragstart", function (event) {
-      dragged = event.target;
-      event.target.style.opacity = 0.5;
-    });
-
-    i.addEventListener("dragend", function (event) {
-      event.target.style.opacity = "";
-    });
-
-    i.addEventListener("dragover", function (event) {
-      event.preventDefault();
-    });
-
-    i.addEventListener("dragenter", function (event) {
-      if (event.target.className === " dropzone") {
-        event.target.style.background = "purple";
-      }
-    });
-
-    i.addEventListener("dragleave", function (evemt) {
-      if ((event.target.className = "dropzone")) {
-        event.target.style.background = "";
-      }
-    });
-  });
+function onDragStart(event) {
+  event.dataTransfer.setData("text/plain", event.target.id);
+  event.currentTarget.style.backgroundColor = "yellow";
 }
 
-init();
+function onDragOver(event) {
+  event.preventDefault();
+}
+
+function onDrop(event) {
+  const id = event.dataTransfer.getData("text");
+  const elDraggable = document.getElementById(id);
+  const elDropzone = event.target;
+
+  elDropzone.appendChild(elDraggable);
+
+  event.dataTransfer.clearData();
+}

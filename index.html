@@ -15,29 +15,36 @@
     <div class="items">
       <i
         class="fas fa-apple-alt"
-        id="draggable"
+        id="one"
         draggable="true"
-        ondragstart="event.dataTransfer.setData('text/plain',null)"
+        ondragstart="onDragStart(event)"
       ></i>
       <i
         class="fas fa-won-sign"
-        id="draggable"
+        id="two"
         draggable="true"
-        ondragstart="event.dataTransfer.setData('text/plain',null)"
+        ondragstart="onDragStart(event)"
       ></i>
       <i
         class="fas fa-home"
-        id="draggable"
+        id="three"
         draggable="true"
-        ondragstart="event.dataTransfer.setData('text/plain',null)"
+        ondragstart="onDragStart(event)"
       ></i>
       <i
         class="fas fa-ice-cream"
-        id="draggable"
+        id="four"
         draggable="true"
-        ondragstart="event.dataTransfer.setData('text/plain',null)"
+        ondragstart="onDragStart(event)"
       ></i>
     </div>
-    <div class="cart dropzone">Put in this Box</div>
+    <div
+      class="cart dropzone"
+      ondragover="onDragOver(event)"
+      ondrop="onDrop(event)"
+    >
+      Put in this Box
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
