@@ -12,28 +12,32 @@
   </head>
   <body>
     <div class="title">What do you wanna get??</div>
-    <div class="items">
+    <div
+      class="items dropzone"
+      ondragover="onDragOver(event)"
+      ondrop="onDrop(event)"
+    >
       <i
-        class="fas fa-apple-alt"
-        id="one"
+        class="fas fa-apple-alt item"
+        id="apple"
         draggable="true"
         ondragstart="onDragStart(event)"
       ></i>
       <i
-        class="fas fa-won-sign"
-        id="two"
+        class="fas fa-won-sign item"
+        id="money"
         draggable="true"
         ondragstart="onDragStart(event)"
       ></i>
       <i
-        class="fas fa-home"
-        id="three"
+        class="fas fa-home item"
+        id="house"
         draggable="true"
         ondragstart="onDragStart(event)"
       ></i>
       <i
-        class="fas fa-ice-cream"
-        id="four"
+        class="fas fa-ice-cream item"
+        id="icecream"
         draggable="true"
         ondragstart="onDragStart(event)"
       ></i>
@@ -45,6 +49,8 @@
     >
       Put in this Box
     </div>
+    <button>submit</button>
+    <div class="alarm-screen hidden"></div>
     <script src="index.js"></script>
   </body>
 </html>
