@@ -37,21 +37,23 @@ function handleSubmit() {
   icons.forEach(function (i) {
     if (i.id === "apple") {
       const apple = document.createElement("div");
-      apple.innerText =
-        "Apple: Do you like Iphone? but this is not Iphons'logo!!";
+      apple.innerHTML =
+        "<span>Apple🍎</span> <span> Do you like Iphone?<br> but this is not Iphons'logo!!</span>";
       alarm.appendChild(apple);
     } else if (i.id === "money") {
       const money = document.createElement("div");
-      money.innerText =
-        "Money: First, you should try to find  what is your goal. and do it steadily. then you will get much money";
+      money.innerHTML =
+        "<span>Money💰</span> <span> Me too.. Please give me money</span>";
       alarm.appendChild(money);
     } else if (i.id === "house") {
       const house = document.createElement("div");
-      house.innerText = "House: House is very expensive";
+      house.innerHTML =
+        "<span>House🏠</span> <span> House is very expensive</span>";
       alarm.appendChild(house);
     } else {
       const icecream = document.createElement("div");
-      icecream.innerText = "Ice cream: It's very delicious";
+      icecream.innerHTML =
+        "<span>Ice cream🍧</span> <span> It's very delicious</span>";
       alarm.appendChild(icecream);
     }
   });
